@@ -45,4 +45,14 @@ target-version = ['py39']
 
 [tool.isort]
 profile = "black"
-line_length = 88 
+line_length = 88
+
+[tool.uvx]
+name = "circuitmcp"
+install-command = "pip install git+https://github.com/amzsaint/circuitmcp.git"
+version-command = "python -c \"import circuitmcp; print(circuitmcp.__version__)\""
+description = "Circuit simulation capabilities through Model Context Protocol (MCP)"
+repository = "https://github.com/amzsaint/circuitmcp"
+author = "CircuitMCP Team"
+license = "MIT"
+tags = ["circuit", "simulation", "MCP", "PySpice", "schematic"] 

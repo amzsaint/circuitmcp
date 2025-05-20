@@ -1,0 +1,29 @@
+{
+  "name": "circuitmcp",
+  "version": "0.1.0",
+  "description": "Circuit simulation capabilities through Model Context Protocol (MCP)",
+  "repository": "https://github.com/amzsaint/circuitmcp",
+  "author": "CircuitMCP Team",
+  "license": "MIT",
+  "tags": ["circuit", "simulation", "MCP", "PySpice", "schematic"],
+  "install_command": "pip install git+https://github.com/amzsaint/circuitmcp.git",
+  "version_command": "python -c \"import circuitmcp; print(circuitmcp.__version__)\"",
+  "main": "circuitmcp",
+  "dependencies": {
+    "python": ">=3.9",
+    "PySpice": ">=1.5.0",
+    "schemdraw": ">=0.15",
+    "matplotlib": ">=3.8.2"
+  },
+  "scripts": {
+    "server": "circuitmcp-server"
+  },
+  "keywords": [
+    "circuit simulation",
+    "electronic design",
+    "model context protocol",
+    "mcp",
+    "pyspice",
+    "schemdraw"
+  ]
+} 

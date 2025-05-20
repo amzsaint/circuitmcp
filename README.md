@@ -16,12 +16,15 @@ This project implements an MCP server for circuit simulation, allowing AI assist
 
 ## Installation
 
-### Using UVX (Recommended)
+### Using UVX in Cursor (Recommended)
 
-The easiest way to install CircuitMCP is using UVX:
+The easiest way to install CircuitMCP is using UVX directly in Cursor:
 
 ```bash
-# Install the package
+# Install the package from GitHub
+uvx install git+https://github.com/amzsaint/circuitmcp.git
+
+# Or install by name once registered
 uvx install circuitmcp
 
 # Verify installation
@@ -103,6 +106,17 @@ async def main():
 if __name__ == "__main__":
     asyncio.run(main())
 ```
+
+## Cursor Integration
+
+When installed via UVX, CircuitMCP can be used directly in Cursor:
+
+1. Open Cursor and type `/install circuitmcp` or `/install git+https://github.com/amzsaint/circuitmcp.git`
+2. Use the package in your Python code:
+   ```python
+   from circuitmcp import mcp, Circuit
+   ```
+3. Run the server with `/run circuitmcp-server`
 
 ## Testing
 
