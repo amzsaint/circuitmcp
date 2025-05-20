@@ -16,9 +16,9 @@ This project implements an MCP server for circuit simulation, allowing AI assist
 
 ## Installation
 
-### Using UVX in Cursor (Recommended)
+### Using UVX in Cursor or Claude Desktop (Recommended)
 
-The easiest way to install CircuitMCP is using UVX directly in Cursor:
+The easiest way to install CircuitMCP is using UVX directly in Cursor or Claude Desktop:
 
 ```bash
 # Install the package from GitHub
@@ -30,6 +30,37 @@ uvx install circuitmcp
 # Verify installation
 uvx list | grep circuitmcp
 ```
+
+### Claude Desktop Integration
+
+To use CircuitMCP with Claude Desktop:
+
+1. Install the UVX package:
+   ```bash
+   uvx install circuitmcp
+   ```
+
+2. Create an MCP configuration file (`mcp_config.json`):
+   ```json
+   {
+     "servers": [
+       {
+         "name": "Circuit Simulator",
+         "command": ["circuitmcp-server", "--host", "127.0.0.1", "--port", "8000"]
+       }
+     ]
+   }
+   ```
+
+3. Start Claude Desktop with MCP configuration:
+   ```bash
+   claude-desktop --mcp-config=mcp_config.json
+   ```
+
+4. In Claude Desktop, you can now use circuit simulation capabilities:
+   ```
+   Please create a simple voltage divider circuit with a 9V source and two 10kΩ resistors.
+   ```
 
 ### Manual Installation
 

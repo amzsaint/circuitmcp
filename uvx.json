@@ -25,5 +25,19 @@
     "mcp",
     "pyspice",
     "schemdraw"
-  ]
+  ],
+  "claude_desktop": {
+    "enabled": true,
+    "mcp": {
+      "server_command": "circuitmcp-server",
+      "default_port": 8000,
+      "server_args": ["--host", "127.0.0.1", "--port", "8000"],
+      "capabilities": [
+        "circuit-creation",
+        "circuit-simulation",
+        "schematic-generation"
+      ]
+    },
+    "usage_example": "from circuitmcp import mcp, Circuit\n\n# Create a new circuit\ncircuit = Circuit(circuit_id=1, name='My Circuit')\n\n# Add components\ncircuit.add_component('V', ['1', '0'], 5.0)  # 5V source\ncircuit.add_component('R', ['1', '2'], 1000.0)  # 1kΩ resistor"
+  }
 } 
