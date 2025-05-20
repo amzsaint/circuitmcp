@@ -1,0 +1,36 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Troubleshooting
+
+## Common Issues:
+
+### NGSpice Library Not Found
+```
+cannot load library 'libngspice.dylib'
+```
+
+**Solution**: 
+1. Install NGSpice using your package manager:
+   - macOS: `brew install ngspice`
+   - Ubuntu: `apt-get install ngspice`
+   - Windows: Download from the NGSpice website
+2. Make sure the library is in your system's library path
+
+### Simulation Errors
+If you encounter errors during simulation, check:
+1. Component connections (all nodes must be properly connected)
+2. Component values (must be valid for the component type)
+3. Analysis parameters (must match the expected format)
+
+### Schematic Generation
+If schematic generation works but looks incorrect:
+1. Check component order (affects layout)
+2. Verify node connections
+3. The schematics directory must exist
+
+## Testing:
+- [circuitmcp/test_mcp.py](mdc:circuitmcp/test_mcp.py) can be used to verify server functionality
+- Run with `python circuitmcp/test_mcp.py`

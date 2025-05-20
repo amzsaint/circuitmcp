@@ -1,0 +1,19 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# MCP Server Implementation
+
+The [circuitmcp/mcp_server.py](mdc:circuitmcp/mcp_server.py) file implements a Model Context Protocol (MCP) server for circuit simulation.
+
+## Key Components:
+- **Tools**: Functions that perform actions (create_circuit, add_component, simulate_circuit, etc.)
+- **Resources**: Data sources that can be read (list_circuits, get_circuit_details, etc.)
+- **Prompts**: Pre-defined templates for interactions (create_rc_filter, create_opamp_circuit, etc.)
+
+## Implementation:
+- Uses a mock MCP SDK implementation defined in [circuitmcp/mock_mcp.py](mdc:circuitmcp/mock_mcp.py)
+- Stores circuits in an in-memory dictionary (in a production environment, a database would be used)
+- Interfaces with PySpice for circuit simulation
+- Uses SchemDraw for generating circuit schematics

@@ -1,0 +1,20 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# CircuitMCP Project Structure
+
+This codebase implements a Model Context Protocol (MCP) server for circuit simulation:
+
+## Core Components:
+- [circuitmcp/mcp_server.py](mdc:circuitmcp/mcp_server.py): Main MCP server implementation
+- [circuitmcp/circuit.py](mdc:circuitmcp/circuit.py): Circuit class for component management and simulation
+- [circuitmcp/mock_mcp.py](mdc:circuitmcp/mock_mcp.py): Mock MCP SDK implementation
+
+## Examples and Tests:
+- [examples/mcp_client.py](mdc:examples/mcp_client.py): Example client demonstrating MCP usage
+- [circuitmcp/test_mcp.py](mdc:circuitmcp/test_mcp.py): Test script for verifying MCP functionality
+
+## Dependencies:
+- [requirements.txt](mdc:requirements.txt): Required Python packages

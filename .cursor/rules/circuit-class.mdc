@@ -1,0 +1,23 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Circuit Class
+
+The [circuitmcp/circuit.py](mdc:circuitmcp/circuit.py) file implements the Circuit class, which is the core data model for circuit simulation.
+
+## Key Functionalities:
+- **Component Management**: Adding, removing, and updating circuit components
+- **Simulation**: Creating PySpice circuits and running simulations (DC, AC, transient)
+- **Visualization**: Generating schematic drawings using SchemDraw
+- **Versioning**: Tracking circuit history and allowing retrieval of previous versions
+
+## Component Types:
+- Resistors (R), Capacitors (C), Inductors (L)
+- Voltage Sources (V), Current Sources (I)
+- Diodes (D), Transistors (Q, M)
+- Universal Verification Xcomponents (UVX) for complex devices like op-amps
+
+## Usage:
+The Circuit class is used by the MCP server in [circuitmcp/mcp_server.py](mdc:circuitmcp/mcp_server.py) to implement the circuit simulation capabilities exposed through the MCP API.

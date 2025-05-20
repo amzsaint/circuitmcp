@@ -1,0 +1,39 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# MCP Client Usage
+
+The [examples/mcp_client.py](mdc:examples/mcp_client.py) file demonstrates how to interact with the Circuit Simulation MCP Server.
+
+## ClientSession Class:
+- Connects to the MCP server
+- Provides methods to call tools, get resources, and access prompts
+- Allows for asynchronous interaction with the server
+
+## Example Usage:
+```python
+# Create a client and connect to the server
+client = CircuitMCPClient()
+await client.connect()
+
+# Create a new circuit
+circuit = await client.create_circuit("RC Low-Pass Filter")
+circuit_id = circuit["id"]
+
+# Add components
+await client.add_component(circuit_id, "V", ["1", "0"], 5.0)  # Voltage source
+await client.add_component(circuit_id, "R", ["1", "2"], 1000.0)  # Resistor
+await client.add_component(circuit_id, "C", ["2", "0"], 1e-6)  # Capacitor
+
+# Run a simulation
+result = await client.simulate(circuit_id)
+
+# Generate a schematic
+schematic = await client.generate_schematic(circuit_id)
+```
+
+## Running Examples:
+- [examples/mcp_client.py](mdc:examples/mcp_client.py) contains examples for RC filter and op-amp circuits
+- Run with `python examples/mcp_client.py`

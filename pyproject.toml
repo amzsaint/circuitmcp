@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "circuitmcp"
+version = "0.1.0"
+description = "Circuit simulation capabilities exposed through Anthropic's Model Context Protocol (MCP)"
+readme = "README.md"
+authors = [
+    {name = "CircuitMCP Team", email = "your.email@example.com"}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "PySpice>=1.5.0",
+    "schemdraw>=0.15",
+    "matplotlib>=3.8.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/amzsaint/circuitmcp"
+"Bug Tracker" = "https://github.com/amzsaint/circuitmcp/issues"
+
+[project.scripts]
+circuitmcp-server = "circuitmcp.main:main"
+
+[tool.setuptools]
+packages = ["circuitmcp"]
+
+[tool.setuptools.package-data]
+circuitmcp = ["*.py"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+line_length = 88 
