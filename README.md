@@ -16,7 +16,22 @@ This project implements an MCP server for circuit simulation, allowing AI assist
 
 ## Installation
 
-### Using UVX in Cursor or Claude Desktop (Recommended)
+### Quick Setup (Recommended)
+
+We provide setup scripts that handle all installation steps automatically:
+
+- **Linux/macOS**: `./setup_circuitmcp.sh`
+- **Windows (CMD)**: `setup_circuitmcp.bat`
+- **Windows (PowerShell)**: `.\setup_circuitmcp.ps1`
+
+These scripts will:
+1. Install required dependencies
+2. Install NGSpice (or guide you through installation)
+3. Set up a virtual environment (if desired)
+4. Install CircuitMCP
+5. Configure UVX for Cursor and Claude Desktop integration (if available)
+
+### Using UVX in Cursor or Claude Desktop
 
 The easiest way to install CircuitMCP is using UVX directly in Cursor or Claude Desktop:
 
